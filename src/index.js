@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { AuthContextProvider } from './store/auth-context';
+import { Provider } from 'react-redux';
+import { AuthContextProvider } from './redux/auth-context';
+import store from './redux/configureStore';
 import './index.css';
 import App from './App';
 
@@ -8,7 +10,9 @@ const rootElement = document.getElementById('root');
 
 render(
   <AuthContextProvider>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </AuthContextProvider>,
   rootElement,
 );

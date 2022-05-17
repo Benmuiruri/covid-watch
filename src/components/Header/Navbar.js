@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 // @ts-nocheck
 import React, { useContext } from 'react';
-import AuthContext from '../../store/auth-context';
+import AuthContext from '../../redux/auth-context';
 
 import classes from './Navbar.module.css';
 
