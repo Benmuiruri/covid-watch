@@ -1,12 +1,25 @@
-import React from 'react';
-
-import Card from '../UI/Card/Card';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-key */
+// @ts-nocheck
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { loadContinentData } from '../../redux/countries/countries';
 import classes from './Home.module.css';
 
-const Home = () => (
-  <Card className={classes.home}>
-    <h1>Welcome back!</h1>
-  </Card>
-);
+const Home = () => {
+  const countries = useSelector((state) => state.countries);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadContinentData());
+  }, []);
+  return (
+    <section>
+      <h2>African Country&apos;s COVID Vaccine Data</h2>
+      <div>
+        {countries && countries.map((country) => <p>{country.All.country}</p>)}
+      </div>
+    </section>
+  );
+};
 
 export default Home;

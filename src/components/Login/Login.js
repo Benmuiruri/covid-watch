@@ -10,7 +10,7 @@ import React, {
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
-import AuthContext from '../../store/auth-context';
+import AuthContext from '../../redux/auth-context';
 import Input from '../UI/Input/Input';
 
 const emailReducer = (state, action) => {
