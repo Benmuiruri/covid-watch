@@ -12,11 +12,15 @@ function App() {
   const ctx = useContext(AuthContext);
   return (
     <div className={classes.mainContent}>
-      <Header />
-      <main>
-        {!ctx.isLoggedIn && <Login />}
-        {ctx.isLoggedIn && <Home />}
-      </main>
+      {!ctx.isLoggedIn && <Login />}
+      {ctx.isLoggedIn && (
+        <>
+          {' '}
+          <Header />
+          {' '}
+          <Home />
+        </>
+      )}
     </div>
   );
 }
