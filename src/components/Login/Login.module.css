@@ -4,7 +4,7 @@
 .login {
   max-width: 40rem;
   margin-bottom: 1em;
-  padding: 1em;
+  padding: 0.6em;
   color: #fff;
 }
 
@@ -23,9 +23,10 @@
   padding: 0 1em;
 }
 
-.chevronIcon {
+.anglesRight {
   width: 2.5em;
   padding-left: 0.5em;
+  color: #e65389;
 }
 
 .toggleSection {
@@ -39,7 +40,7 @@
 }
 
 .logo-image {
-  width: 18vw;
+  width: 25vw;
 }
 
 .logo {
@@ -50,6 +51,7 @@
 
 .loginHeader {
   text-align: center;
+  font-size: 0.9em;
 }
 
 .passwordLink {
