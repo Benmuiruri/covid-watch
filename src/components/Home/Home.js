@@ -4,7 +4,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadContinentData } from '../../redux/countries/countries';
-import africaImg from '../../assets/africa.png';
+import CountryCard from '../Country/CountryCard';
 import classes from './Home.module.css';
 
 const Home = () => {
@@ -68,7 +68,9 @@ const Home = () => {
         <h2>African Country&apos;s COVID Vaccine Data</h2>
         <div>
           {countries
-            && countries.map((country) => <p>{country.All.country}</p>)}
+            && countries.map((country) => (
+              <CountryCard key={country.All.country} countryName={country} />
+            ))}
         </div>
       </section>
     </>
