@@ -3,7 +3,7 @@
 import React, { useContext } from 'react';
 
 import Login from './components/Login/Login';
-import Home from './components/Home/Home';
+import Home from './components/Pages/Home';
 import Header from './components/Header/Header';
 import AuthContext from './redux/auth-context';
 import classes from './App.module.css';
