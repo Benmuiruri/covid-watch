@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 // @ts-nocheck
 // @ts-ignore
 import React, {
@@ -7,6 +8,9 @@ import React, {
   useContext,
   useRef,
 } from 'react';
+import toggleImg from '../../assets/toggle.png';
+import chevronRight from '../../assets/chevron-right.png';
+import logoImg from '../../assets/logo.png';
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
@@ -101,35 +105,65 @@ const Login = () => {
   };
 
   return (
-    <Card className={classes.login}>
-      <form onSubmit={submitHandler}>
-        <Input
-          ref={emailInputRef}
-          id="email"
-          label="E-Mail"
-          type="email"
-          isValid={emailIsValid}
-          value={emailState.value}
-          onChange={emailChangeHandler}
-          onBlur={validateEmailHandler}
-        />
-        <Input
-          ref={passwordInputRef}
-          id="password"
-          label="Password"
-          type="password"
-          isValid={passwordIsValid}
-          value={passwordState.value}
-          onChange={passwordChangeHandler}
-          onBlur={validatePasswordHandler}
-        />
-        <div className={classes.actions}>
-          <Button type="submit" className={classes.btn}>
-            Login
-          </Button>
+    <>
+      <div className={classes.innerContent}>
+        <div className={classes.toggleSection}>
+          <span className={classes.language}>EN</span>
+          <img
+            src={toggleImg}
+            className={classes.toggleIcon}
+            alt="toggle icon"
+          />
+          <span className={classes.language}>FR</span>
+          <img
+            src={chevronRight}
+            className={classes.chevronIcon}
+            alt="chevron icon"
+          />
         </div>
-      </form>
-    </Card>
+        <div className={classes['logo-image']}>
+          <img src={logoImg} className={classes.logo} alt="Logo" />
+        </div>
+        <Card className={classes.login}>
+          <h2 className={classes.loginHeader}>Enter your login details</h2>
+          <form onSubmit={submitHandler}>
+            <Input
+              ref={emailInputRef}
+              id="email"
+              label="E-Mail"
+              type="email"
+              placeholder="Email"
+              isValid={emailIsValid}
+              value={emailState.value}
+              onChange={emailChangeHandler}
+              onBlur={validateEmailHandler}
+            />
+            <Input
+              ref={passwordInputRef}
+              id="password"
+              label="Password"
+              type="password"
+              placeholder="Password"
+              isValid={passwordIsValid}
+              value={passwordState.value}
+              onChange={passwordChangeHandler}
+              onBlur={validatePasswordHandler}
+            />
+            <div className={classes.actions}>
+              <Button type="submit" className={classes.btn}>
+                Login
+              </Button>
+            </div>
+          </form>
+        </Card>
+        <a href="#" className={classes.passwordLink}>
+          forgot email/password
+        </a>
+        <Button type="button" className={classes.twitterBtn}>
+          Sign in with Twitter
+        </Button>
+      </div>
+    </>
   );
 };
 
