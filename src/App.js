@@ -6,17 +6,18 @@ import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import AuthContext from './redux/auth-context';
+import classes from './App.module.css';
 
 function App() {
   const ctx = useContext(AuthContext);
   return (
-    <>
+    <div className={classes.mainContent}>
       <Header />
       <main>
         {!ctx.isLoggedIn && <Login />}
         {ctx.isLoggedIn && <Home />}
       </main>
-    </>
+    </div>
   );
 }
 
