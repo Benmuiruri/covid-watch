@@ -21,38 +21,38 @@ const CountryStats = () => {
     <div className={classes.statsContentWrapper}>
       {country && (
         <div className={classes.statsContent}>
-          <div className={`${classes.centered} ${classes.mainStats}`}>
+          <div className={`${classes.centered} ${classes.mainStatsDiv}`}>
             <img
               src={vaccineImg}
-              className={classes.coronaImage}
+              className={classes.vaccineImage}
               alt="Corona Virus Vaccine"
             />
-            <div>
+            <div className={`${classes.mainStats}`}>
               <h3>{country.country}</h3>
               <p>
-                Total Vaccines Administed to date:
+                Total Vaccines Administed
                 {' '}
-                {country.administered}
+                {country.administered.toLocaleString()}
               </p>
             </div>
           </div>
-          <div className={`${classes.centered} ${classes.additionalStats}`}>
+          <div className={`${classes.additionalStats}`}>
             <h4>
               {' '}
               {country.country}
               {' '}
               COVID-19 Vaccine Statistics
             </h4>
-            <ListGroup className={classes.statisticsTable} as="ul">
-              <ListGroup.Item className={classes.statisticsLight} as="li">
-                <h4>People Fully Vaccinated </h4>
+            <div className={classes.statisticsTable}>
+              <div className={`${classes.statisticDiv} ${classes.statisticsLight}`}>
+                <h5>People Fully Vaccinated </h5>
                 <p>{country.people_vaccinated.toLocaleString()}</p>
-              </ListGroup.Item>
-              <ListGroup.Item className={classes.statisticsDark} as="li">
-                <h4>People Partially Vaccinated </h4>
+              </div>
+              <div className={`${classes.statisticDiv} ${classes.statisticsDark}`}>
+                <h5>People Partially Vaccinated </h5>
                 <p>{country.people_partially_vaccinated.toLocaleString()}</p>
-              </ListGroup.Item>
-            </ListGroup>
+              </div>
+            </div>
           </div>
         </div>
       )}

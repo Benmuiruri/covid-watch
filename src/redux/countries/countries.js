@@ -39,6 +39,6 @@ export const countryVaccineData = (country) => ({
 
 export const loadCountryData = (country) => async (dispatch) => {
   const countryAPIData = await getCountryAPIData(country);
-  const countryData = Object.values(countryAPIData)[0];
+  const countryData = Object.values(countryAPIData)[1].All;
   dispatch(countryVaccineData(countryData));
 };

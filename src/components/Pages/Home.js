@@ -2,19 +2,13 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-// import { loadContinentData } from '../../redux/countries/countries';
 import CountriesList from '../Country/CountriesList';
-// import CountryCard from '../Country/CountryCard';
 import africaImage from '../../assets/africa.png';
 import classes from './Home.module.css';
 
 const Home = () => {
   const countries = useSelector((state) => state.CountriesReducer.countries);
   const [searchValue, setSearchValue] = useState('');
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(loadContinentData());
-  // }, []);
 
   const totalVacinated = () => {
     let total = 0;
@@ -60,18 +54,19 @@ const Home = () => {
           />
         </div>
         <div className={classes.innercontent}>
+          <h1>Africa Vaccine Stats</h1>
           <p>
-            Total Vaccines Administed across Africa:
+            Total Vaccines Administed:
             {' '}
             {totalVacinated()}
           </p>
           <p>
-            Total People Fully Vaccinated across Africa:
+            Fully Vaccinated Individuals:
             {' '}
             {fullyVacinated()}
           </p>
           <p>
-            Total People Partially Vaccinated across Africa:
+            Partially Vaccinated Individuals:
             {' '}
             {partiallyVacinated()}
           </p>
@@ -91,11 +86,6 @@ const Home = () => {
         />
         <div className={classes.countryWrapper}>
           <CountriesList searchValue={searchValue} />
-          {/* {countries
-            && countries.map((country) => (
-              // eslint-disable-next-line max-len
-              <CountryCard countryFilter={searchValue} key={country.All.country} country={country} />
-            ))} */}
         </div>
       </section>
     </>
