@@ -5,11 +5,20 @@
   width: 100%;
   height: 5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   padding: 0 2rem;
+  background: #dd0db0;
 }
 
 .main-header h1 {
-  color: white;
+  color: #fff;
+}
+
+.faIcon {
+  color: #fff;
+}
+
+.homeIcon {
+  margin-right: auto;
 }

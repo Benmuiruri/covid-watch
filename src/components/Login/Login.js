@@ -8,8 +8,9 @@ import React, {
   useContext,
   useRef,
 } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import toggleImg from '../../assets/toggle.png';
-import chevronRight from '../../assets/chevron-right.png';
 import logoImg from '../../assets/logo.png';
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
@@ -115,10 +116,9 @@ const Login = () => {
             alt="toggle icon"
           />
           <span className={classes.language}>FR</span>
-          <img
-            src={chevronRight}
-            className={classes.chevronIcon}
-            alt="chevron icon"
+          <FontAwesomeIcon
+            icon={faAnglesRight}
+            className={`${classes.faIcon} ${classes.anglesRight}`}
           />
         </div>
         <div className={classes['logo-image']}>

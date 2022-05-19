@@ -8,7 +8,8 @@
 .control input {
   display: block;
   font: inherit;
-  padding: 0.35rem 0.35rem;
+  font-size: 0.9em;
+  padding: 0.35rem 0.25rem;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
