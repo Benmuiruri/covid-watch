@@ -1,17 +1,14 @@
+/* eslint-disable max-len */
 // @ts-nocheck
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { loadContinentData } from '../../redux/countries/countries';
-import CountryCard from '../Country/CountryCard';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import CountriesList from '../Country/CountriesList';
 import africaImage from '../../assets/africa.png';
 import classes from './Home.module.css';
 
 const Home = () => {
-  const countries = useSelector((state) => state.countries);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadContinentData());
-  }, []);
+  const countries = useSelector((state) => state.CountriesReducer.countries);
+  const [searchValue, setSearchValue] = useState('');
 
   const totalVacinated = () => {
     let total = 0;
@@ -42,6 +39,10 @@ const Home = () => {
     }
     return total.toLocaleString();
   };
+  const filterCountriesHandler = (e) => {
+    setSearchValue(e.target.value);
+  };
+
   return (
     <>
       <section className={classes.homeCallout}>
@@ -53,30 +54,38 @@ const Home = () => {
           />
         </div>
         <div className={classes.innercontent}>
+          <h1>Africa Vaccine Stats</h1>
           <p>
-            Total Vaccines Administed across Africa:
+            Total Vaccines Administed:
             {' '}
             {totalVacinated()}
           </p>
           <p>
-            Total People Fully Vaccinated across Africa:
+            Fully Vaccinated Individuals:
             {' '}
             {fullyVacinated()}
           </p>
           <p>
-            Total People Partially Vaccinated across Africa:
+            Partially Vaccinated Individuals:
             {' '}
             {partiallyVacinated()}
           </p>
         </div>
       </section>
       <section className={classes.dataSection}>
-        <h2 className={classes.dataSectionHeader}>Africa&apos;s COVID Vaccine Data</h2>
+        <h2 className={classes.dataSectionHeader}>
+          Africa&apos;s COVID Vaccine Data
+        </h2>
+        <input
+          type="text"
+          name="search"
+          value={searchValue}
+          onChange={filterCountriesHandler}
+          className="p-2 pb-1 placeholder:text-white/50 text-center leading-none border bg-transparent rounded-xl uppercase"
+          placeholder="Filter Countries"
+        />
         <div className={classes.countryWrapper}>
-          {countries
-            && countries.map((country) => (
-              <CountryCard key={country.All.country} country={country} />
-            ))}
+          <CountriesList searchValue={searchValue} />
         </div>
       </section>
     </>

@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Oxygen+Mono&family=Raleway:wght@400;700&display=swap');
+
 .homeCallout {
-  background-color: #e65591;
+  background-color: #faeefa;
   padding-top: 5em;
   display: flex;
   flex-direction: row;
@@ -23,6 +25,7 @@
 .africaImageDiv {
   width: 25vw;
   opacity: 0.1;
+  padding: 1em 0;
 }
 
 .africaImage {
@@ -32,7 +35,22 @@
 }
 
 .innercontent {
-  color: #fff;
+  color: #9f2c75;
+  margin-left: 1em;
+}
+
+.innercontent h1 {
+  color: #9f2c75;
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.innercontent p {
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 1em;
 }
 
 .dataSectionHeader {
