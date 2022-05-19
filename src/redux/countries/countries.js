@@ -1,4 +1,4 @@
-import { getAPIData, getCountryAPIData } from '../../utils/dataAPI';
+// import { getAPIData, getCountryAPIData } from '../../utils/dataAPI';
 
 const LOAD_CONTINENT_DATA = 'covidWatch/countries/LOAD_CONTINENT_DATA';
 const LOAD_COUNTRY_DATA = 'covidWatch/countries/LOAD_COUNTRY_DATA';
@@ -18,6 +18,24 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
+
+const CONTINENT_URL = 'https://covid-api.mmediagroup.fr/v1/vaccines?continent=africa';
+const COUNTRY_URL = 'https://covid-api.mmediagroup.fr/v1/vaccines?country';
+
+const getAPIData = async () => {
+  const res = await fetch(CONTINENT_URL);
+  const countries = await res.json();
+  console.log(countries);
+  return countries;
+};
+
+const getCountryAPIData = async (country) => {
+  // @ts-ignore
+  const res = await fetch(`${COUNTRY_URL}=${country}`);
+  const countryData = await res.json();
+  console.log(countryData);
+  return countryData;
+};
 
 export const continentData = (countries) => ({
   type: LOAD_CONTINENT_DATA,
