@@ -7,7 +7,7 @@ import africaImage from '../../assets/africa.png';
 import classes from './Home.module.css';
 
 const Home = () => {
-  const countries = useSelector((state) => state.countries);
+  const countries = useSelector((state) => state.CountriesReducer.countries);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadContinentData());
@@ -71,7 +71,9 @@ const Home = () => {
         </div>
       </section>
       <section className={classes.dataSection}>
-        <h2 className={classes.dataSectionHeader}>Africa&apos;s COVID Vaccine Data</h2>
+        <h2 className={classes.dataSectionHeader}>
+          Africa&apos;s COVID Vaccine Data
+        </h2>
         <div className={classes.countryWrapper}>
           {countries
             && countries.map((country) => (

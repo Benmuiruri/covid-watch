@@ -1,3 +1,27 @@
+.centered {
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .countryStatistics {
   color: #fff;
+}
+
+.statsContentWrapper {
+  background-color: #dd0db0;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.statisticsTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.additionalStats {
+ flex-direction: column; 
+}
+
+.statisticsDark {
+  background-color: #E65389;
 }

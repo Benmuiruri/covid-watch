@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       {ctx.isLoggedIn && (
-        <Nav defaultActiveKey="/home" className={classes.nav} as="ul">
+        <Nav defaultActiveKey="/" className={classes.nav} as="ul">
           <Nav.Item as="li">
             <span>Search</span>
           </Nav.Item>

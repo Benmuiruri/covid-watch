@@ -12,19 +12,25 @@ import classes from './App.module.css';
 function App() {
   const ctx = useContext(AuthContext);
   return (
-    <div className={classes.mainContent}>
-      {!ctx.isLoggedIn && <Login />}
-      {ctx.isLoggedIn && (
-        <>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/countries/:countryName" element={<CountryStats />} />
-          </Routes>
-          <Home />
-        </>
-      )}
-    </div>
+    <>
+      <main>
+        {!ctx.isLoggedIn && (
+          <div className={classes.mainContent}>
+            <Login />
+          </div>
+        )}
+        {ctx.isLoggedIn && (
+          <>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/countries/:name" element={<CountryStats />} />
+              <Route path="*" element={<p>Page not found!</p>} />
+            </Routes>
+          </>
+        )}
+      </main>
+    </>
   );
 }
 
