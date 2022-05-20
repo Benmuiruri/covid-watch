@@ -34,3 +34,13 @@
   height: 100%;
   width: 100%;
 }
+
+@media screen and (max-width: 800px) {
+  .countryStatsContent {
+    flex-direction: column;
+  }
+
+  .countryStatsData {
+    margin: 0 auto;
+  }
+}

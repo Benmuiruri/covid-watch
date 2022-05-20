@@ -2,13 +2,17 @@
 
 ## Preview
 
+<p align="center">Login Page</p>
+
+<img src="./src/assets/login-page.png">
+
 <p align="center">Home Page</p>
 
-Home page coming soon
+<img src="./src/assets/africa-covid.png">
 
 <p align="center">Country Page</p>
 
-<img src="./src/assets/rockets.png">
+<img src="./src/assets/countrypage.png">
 
 Country page coming soon
 
@@ -19,7 +23,11 @@ Country page coming soon
 
 ## Live Link
 
-Live Link coming soon
+[Africa Covic Vaccine Data](https://covid-vaccine-watch.herokuapp.com/)
+
+## Demo Video
+
+[Loom Video](https://www.loom.com/share/94a38dc88ecb471d8e5a69aaff040040)
 
 ## Built With
 
@@ -39,8 +47,6 @@ To get a local copy up and running follow these setup steps below.
 
 ## Authors
 
-👤 **Authors**
-
 - GitHub: [Ben Kiarie](https://github.com/Benmuiruri) - Follow me on Github, browse my projects, and leave a star for any project you like.
 - Twitter: [Optimize](https://twitter.com/_optimize) - Follow me on Twitter I will make your Timeline a bit more interesting
 - LinkedIn: [Ben Kiarie](https://www.linkedin.com/in/benjamin-kiarie-180b66149/) - Connect with me on LinkedIn and help each other grow professionally
@@ -57,7 +63,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 - The design idea was inspired by [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) on Behance.
-- Covid 19 Data provided by the team at [Narrativa API](https://covid19tracking.narrativa.com/index_en.html)
+- Covid 19 Data provided by the team at [M-Media-Group](https://github.com/M-Media-Group/Covid-19-API)
+- Input animation inspired by work by [Stas Melnikov](https://linktr.ee/melnik909)
 - Linters provided by [Microverse](https://github.com/microverseinc/linters-config/)
 
 ## 📝 License

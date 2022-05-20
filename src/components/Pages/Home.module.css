@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Oxygen+Mono&family=Raleway:wght@400;700&display=swap');
 
+.homeContent {
+  min-height: 100vh;
+}
+
 .homeCallout {
   background-color: #faeefa;
   padding-top: 5em;

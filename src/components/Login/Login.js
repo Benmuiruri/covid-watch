@@ -99,8 +99,10 @@ const Login = () => {
       authCtx.onLogin(emailState.value, passwordState.value);
     } else if (!emailIsValid) {
       emailInputRef.current.focus();
+      alert('please enter a valid email');
     } else {
       passwordInputRef.current.focus();
+      alert('please enter a password of more than 6 characters');
     }
   };
 
