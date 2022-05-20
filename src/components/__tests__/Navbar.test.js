@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../Header/Navbar';
 
-describe('Test presence of navigation header', () => {
-  test('renders the navigation correctly', () => {
+describe('Test presence of Navbar', () => {
+  test('should render Navbar component', () => {
     const navComponent = renderer
       .create(
         <BrowserRouter>

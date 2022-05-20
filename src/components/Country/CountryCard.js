@@ -37,17 +37,6 @@ const CountryCard = ({ country }) => {
 
 CountryCard.propTypes = {
   country: PropTypes.shape({
-    All: PropTypes.shape({
-      country: PropTypes.string,
-      administered: PropTypes.number,
-      people_vaccinated: PropTypes.number,
-      people_partially_vaccinated: PropTypes.number,
-    }),
-  }).isRequired,
-};
-
-CountryCard.propTypes = {
-  country: PropTypes.shape({
     name: PropTypes.string.isRequired,
     total: PropTypes.number.isRequired,
   }).isRequired,

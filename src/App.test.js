@@ -4,7 +4,7 @@ import App from './App';
 
 describe('Test presence of App component', () => {
   test('renders the App component correctly', () => {
-    const missionComponent = renderer.create(<App />).toJSON();
-    expect(missionComponent).toMatchSnapshot();
+    const appComponent = renderer.create(<App />).toJSON();
+    expect(appComponent).toMatchSnapshot();
   });
 });
