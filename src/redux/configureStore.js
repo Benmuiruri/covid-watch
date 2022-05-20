@@ -9,7 +9,7 @@ import logger from 'redux-logger';
 import CountriesReducer from './countries/countries';
 
 const rootReducer = combineReducers({
-  CountriesReducer,
+  countries: CountriesReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(logger, thunk));

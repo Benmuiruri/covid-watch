@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // @ts-nocheck
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -7,14 +6,14 @@ import africaImage from '../../assets/africa.png';
 import classes from './Home.module.css';
 
 const Home = () => {
-  const countries = useSelector((state) => state.CountriesReducer.countries);
+  const { countries } = useSelector((state) => state.countries);
   const [searchValue, setSearchValue] = useState('');
 
   const totalVacinated = () => {
     let total = 0;
     if (countries) {
       countries.forEach((country) => {
-        total += country.All.administered;
+        total += country.total;
       });
     }
     return total.toLocaleString();
@@ -24,7 +23,7 @@ const Home = () => {
     let total = 0;
     if (countries) {
       countries.forEach((country) => {
-        total += country.All.people_vaccinated;
+        total += country.full_vacinated;
       });
     }
     return total.toLocaleString();
@@ -34,7 +33,7 @@ const Home = () => {
     let total = 0;
     if (countries) {
       countries.forEach((country) => {
-        total += country.All.people_partially_vaccinated;
+        total += country.partial_vaccinated;
       });
     }
     return total.toLocaleString();
@@ -74,17 +73,25 @@ const Home = () => {
       </section>
       <section className={classes.dataSection}>
         <h2 className={classes.dataSectionHeader}>
-          Africa&apos;s COVID Vaccine Data
+          Africa COVID Vaccine Data
         </h2>
-        <input
-          type="text"
-          name="search"
-          value={searchValue}
-          onChange={filterCountriesHandler}
-          className="p-2 pb-1 placeholder:text-white/50 text-center leading-none border bg-transparent rounded-xl uppercase"
-          placeholder="Filter Countries"
-        />
-        <div className={classes.countryWrapper}>
+        <div className={classes.inputDiv}>
+          <label htmlFor="Search" className={`${classes.field} ${classes.field_v1}`}>
+            <input
+              className={`${classes.field__input} ${classes.field__inputs}`}
+              type="text"
+              name="search"
+              value={searchValue}
+              onChange={filterCountriesHandler}
+              placeholder="e.g. Kenya"
+            />
+            <span className={`${classes['field__label-wrap']}`}>
+              <span className={`${classes.field__label}`}>Search Country</span>
+            </span>
+          </label>
+        </div>
+
+        <div>
           <CountriesList searchValue={searchValue} />
         </div>
       </section>

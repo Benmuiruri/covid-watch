@@ -1,5 +1,8 @@
-.mainContent {
-  padding-top: 2em;
-  background-color: #000;
-  height: 100vh;
+.alertHeader {
+  margin-top: 5em;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
 }

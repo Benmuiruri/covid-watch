@@ -55,12 +55,18 @@
   flex-direction: column;
 }
 
+.statisticsTable div:nth-child(odd) {
+  background-color: #9f2c75;
+}
+
+.statisticsTable div:nth-child(even) {
+  background-color: #d281b5;
+}
+
 .additionalStats {
   margin: 0 auto;
   max-width: 40vw;
   flex-direction: column;
-  border: 1px solid #560238;
-  border-radius: 10px;
 }
 
 .additionalStats h4 {
@@ -71,18 +77,11 @@
   padding: 1em;
 }
 
-.statisticsDark {
-  background-color: #9f2c75;
-}
-
-.statisticsLight {
-  background-color: #d281b5;
-}
-
 .statisticDiv {
   color: #fff;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   padding: 1em;
+  border-radius: 10px;
 }

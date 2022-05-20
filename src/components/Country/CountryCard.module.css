@@ -2,13 +2,11 @@
   color: #fff;
 }
 
-/* .countryCard :nth-child(4n) {
-  color: lime;
-} */
-
 .cardLink {
   text-decoration: none;
   color: #fff;
+  background-color: rgb(208, 67, 120);
+  padding: 1em;
 }
 
 .countryStatsContent {
@@ -20,4 +18,19 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+  margin-left: 1em;
+}
+
+.countryStatsData h3 {
+  padding-bottom: 0.5em;
+}
+
+.countryStatsImg {
+  width: 30vw;
+  margin: 0 auto;
+}
+
+.vaccineImg {
+  height: 100%;
+  width: 100%;
 }

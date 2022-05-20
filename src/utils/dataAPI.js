@@ -5,7 +5,6 @@ const COUNTRY_URL = 'https://covid-api.mmediagroup.fr/v1/vaccines?country';
 const getAPIData = async () => {
   const res = await fetch(CONTINENT_URL);
   const countries = await res.json();
-  console.log(countries);
   return countries;
 };
 
@@ -13,7 +12,6 @@ const getCountryAPIData = async (country) => {
   // @ts-ignore
   const res = await fetch(`${COUNTRY_URL}=${country}`);
   const countryData = await res.json();
-  console.log(countryData);
   return countryData;
 };
 
