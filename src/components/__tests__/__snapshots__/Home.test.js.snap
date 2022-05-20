@@ -73,7 +73,9 @@ Object {
             </span>
           </label>
         </div>
-        <div>
+        <div
+          class="homeContent"
+        >
           <div
             class="countryWrapper"
           />
@@ -151,7 +153,9 @@ Object {
           </span>
         </label>
       </div>
-      <div>
+      <div
+        class="homeContent"
+      >
         <div
           class="countryWrapper"
         />
