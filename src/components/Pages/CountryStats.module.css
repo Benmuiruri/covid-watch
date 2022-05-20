@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Oxygen+Mono&family=Raleway:wght@400;700&display=swap');
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countryStatistics {
+  color: #fff;
+}
+
+.statsContentWrapper {
+  background-color: #faeefa;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.statsContent {
+  padding-top: 2em;
+  background-color: #e65e92;
+  height: 100vh;
+}
+
+.mainStatsDiv {
+  width: 30vw;
+  margin: 0 auto;
+}
+
+.vaccineImage {
+  height: 70%;
+  width: 70%;
+}
+
+.mainStats {
+  color: #fff;
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.mainStats h3 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.mainStats p {
+  padding-top: 2em;
+  line-height: 1.3em;
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.statisticsTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.statisticsTable div:nth-child(odd) {
+  background-color: #9f2c75;
+}
+
+.statisticsTable div:nth-child(even) {
+  background-color: #d281b5;
+}
+
+.additionalStats {
+  margin: 0 auto;
+  max-width: 40vw;
+  flex-direction: column;
+}
+
+.additionalStats h4 {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Oxygen Mono', monospace;
+  padding: 1em;
+}
+
+.statisticDiv {
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-radius: 10px;
+}
