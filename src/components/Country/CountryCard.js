@@ -7,7 +7,6 @@ import classes from './CountryCard.module.css';
 
 const CountryCard = ({ country }) => {
   const URL = `/countries/${country.name}`;
-
   return (
     <>
       <Card.Link href={URL} className={classes.cardLink}>
@@ -50,7 +49,7 @@ CountryCard.propTypes = {
 CountryCard.propTypes = {
   country: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    total: PropTypes.string.isRequired,
+    total: PropTypes.number.isRequired,
   }).isRequired,
 };
 
