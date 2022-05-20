@@ -7,7 +7,6 @@ import classes from './CountryCard.module.css';
 
 const CountryCard = ({ country }) => {
   const URL = `/countries/${country.name}`;
-
   return (
     <>
       <Card.Link href={URL} className={classes.cardLink}>
@@ -38,19 +37,8 @@ const CountryCard = ({ country }) => {
 
 CountryCard.propTypes = {
   country: PropTypes.shape({
-    All: PropTypes.shape({
-      country: PropTypes.string,
-      administered: PropTypes.number,
-      people_vaccinated: PropTypes.number,
-      people_partially_vaccinated: PropTypes.number,
-    }),
-  }).isRequired,
-};
-
-CountryCard.propTypes = {
-  country: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    total: PropTypes.string.isRequired,
+    total: PropTypes.number.isRequired,
   }).isRequired,
 };
 
