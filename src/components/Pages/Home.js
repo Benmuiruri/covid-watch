@@ -91,7 +91,7 @@ const Home = () => {
           </label>
         </div>
 
-        <div>
+        <div className={`${classes.homeContent}`}>
           <CountriesList searchValue={searchValue} />
         </div>
       </section>
