@@ -27,7 +27,7 @@ Country page coming soon
 
 ## Demo Video
 
-[Loom Video](https://covid-vaccine-watch.herokuapp.com/)
+[Loom Video](https://www.loom.com/share/94a38dc88ecb471d8e5a69aaff040040)
 
 ## Built With
 
