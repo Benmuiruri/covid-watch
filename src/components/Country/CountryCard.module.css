@@ -39,6 +39,7 @@
   .countryStatsContent {
     flex-direction: column;
   }
+
   .countryStatsData {
     margin: 0 auto;
   }
