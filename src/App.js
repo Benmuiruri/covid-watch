@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-// @ts-nocheck
 import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
@@ -25,7 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/countries/:name" element={<CountryStats />} />
-              <Route path="*" element={<p>Page not found!</p>} />
+              <Route path="*" element={<h1 className={classes.alertHeader}>Page not found!</h1>} />
             </Routes>
           </>
         )}

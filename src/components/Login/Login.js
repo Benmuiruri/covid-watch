@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // @ts-nocheck
-// @ts-ignore
 import React, {
   useState,
   useEffect,

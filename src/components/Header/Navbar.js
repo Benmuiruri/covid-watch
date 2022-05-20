@@ -1,5 +1,3 @@
-/* eslint-disable react/button-has-type */
-// @ts-nocheck
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faMicrophone } from '@fortawesome/free-solid-svg-icons';
@@ -29,7 +27,7 @@ const Navbar = () => {
           <Nav.Item as="li">
             <Nav.Link eventKey="link-2">
               {' '}
-              <button onClick={ctx.onLogout}>Logout</button>
+              <button type="button" onClick={ctx.onLogout}>Logout</button>
             </Nav.Link>
           </Nav.Item>
         </Nav>
