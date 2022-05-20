@@ -6,3 +6,9 @@
   align-items: center;
   color: #000;
 }
+
+.mainContent {
+  padding-top: 2em;
+  background-color: #000;
+  height: 100vh;
+}

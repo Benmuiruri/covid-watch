@@ -2,13 +2,17 @@
 
 ## Preview
 
+<p align="center">Login Page</p>
+
+<img src="./src/assets/login-page.png">
+
 <p align="center">Home Page</p>
 
-Home page coming soon
+<img src="./src/assets/africa-covid.png">
 
 <p align="center">Country Page</p>
 
-<img src="./src/assets/rockets.png">
+<img src="./src/assets/countrypage.png">
 
 Country page coming soon
 
@@ -19,7 +23,7 @@ Country page coming soon
 
 ## Live Link
 
-Live Link coming soon
+[Africa Covic Vaccine Data](https://covid-vaccine-watch.herokuapp.com/)
 
 ## Built With
 
