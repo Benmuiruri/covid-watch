@@ -1,4 +1,4 @@
-import { getCountryAPIData } from '../../utils/dataAPI';
+import getCountryAPIData from '../../utils/dataAPI';
 
 const LOAD_CONTINENT_DATA = 'covidWatch/countries/LOAD_CONTINENT_DATA';
 const LOAD_COUNTRY_DATA = 'covidWatch/countries/LOAD_COUNTRY_DATA';
